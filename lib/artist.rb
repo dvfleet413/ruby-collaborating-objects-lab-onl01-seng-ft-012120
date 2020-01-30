@@ -24,4 +24,7 @@ class Artist
     result = Artist.all.detect {|artist| artist.name == name}
     result.nil? ? result = Artist.new(name) : result
   end
+  
+  def print_songs
+    self.songs.each {|song| puts "#{song.name}"
 end
